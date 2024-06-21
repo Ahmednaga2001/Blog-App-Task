@@ -16,7 +16,7 @@ To run the Movie-App project locally, follow these steps:
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/Ahmednaga2001/Movies-App.git
+   git clone https://github.com/Ahmednaga2001/Blog-App-Task.git
 
 2. **Install Dependencies**
    ```sh
@@ -27,8 +27,8 @@ To run the Movie-App project locally, follow these steps:
 
 ## Technology Stack
 
---**NextJs
---**Tailwind CSS
---**TypeScript
+-**NextJs**
+-**Tailwind CSS**
+-**TypeScript**
 
 **Live Demo:** Check out the live demo of the Blog App Task [here](https://blog-app-task.netlify.app/).
