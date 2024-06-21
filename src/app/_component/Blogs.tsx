@@ -14,3 +14,4 @@ const Blogs = ({ postData }: { postData: IPostData }) => {
 };
 
 export default Blogs;
+
