@@ -1,12 +1,12 @@
 'use client'
 import React, { useState } from 'react';
 import BreadCrumb from "../_component/BreadCrumb"
-import { usePathname , useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 const CreatePost = () => {
 
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
-    const [tag , setTag] = useState("")
+    const [tag, setTag] = useState("")
     const path = usePathname()
     const router = useRouter()
 
@@ -14,17 +14,24 @@ const CreatePost = () => {
         e.preventDefault();
         if (!title.trim()) {
             console.log("Title is required");
+            return
         }
         if (!content.trim()) {
             console.log("content is required");
+            return
         }
         if (!tag.trim()) {
             console.log("Tag is required");
+            return
         }
         setTitle("");
         setContent("");
         setTag("");
-        router.push("/")
+        console.log(`Title is ${title} , Content is ${content} and Tag is ${tag}`);
+        setTimeout(() => {
+            router.push("/")
+
+        }, 2000)
     };
 
     return (
@@ -34,6 +41,7 @@ const CreatePost = () => {
                     <BreadCrumb path={path} />
                 </div>
                 <div className='lg:w-[60%] md:w-full mx-auto bg-gray-800 shadow-md px-8 py-10 rounded-lg'>
+                    <h2 className='text-center text-white font-semibold text-[28px]'>Create Post</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label htmlFor="title" className="block text-white text-sm font-bold mb-2">Title</label>
@@ -46,7 +54,7 @@ const CreatePost = () => {
                         <div className='mb-4'>
                             <label htmlFor="HeadlineAct" className="block text-white text-sm font-bold mb-2"> Tags </label>
 
-                            <select onChange={(e)=>setTag(e.target.value)}
+                            <select onChange={(e) => setTag(e.target.value)}
                                 name="HeadlineAct"
                                 id="HeadlineAct"
                                 className="mt-1.5 w-full rounded-lg p-2 outline-none text-gray-700 sm:text-sm"
