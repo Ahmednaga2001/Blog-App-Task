@@ -1,6 +1,6 @@
 import BlogItem from "./BlogItem";
 import BlogSkelton from "../_component/BlogSkelton";
-import { IPost, IPostData } from "../types";
+import { IPost, IPostData } from "../_types";
 const Blogs = ({ postData }: { postData: IPostData }) => {
   return (
     <div className="blogs mt-[102px]">

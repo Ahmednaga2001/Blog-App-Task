@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState , FormEvent} from 'react';
 import BreadCrumb from "../_component/BreadCrumb"
 import { usePathname, useRouter } from 'next/navigation';
 const CreatePost = () => {
@@ -10,7 +10,7 @@ const CreatePost = () => {
     const path = usePathname()
     const router = useRouter()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e : FormEvent<HTMLFormElement>):void=> {
         e.preventDefault();
         if (!title.trim()) {
             console.log("Title is required");

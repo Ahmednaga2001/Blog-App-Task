@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import BreadCrumbClient from "../../_component/BreadCrumbClient";
-import { IPost, IParams } from "../../types/index";
+import { IPost, IParams } from "../../_types/index";
 async function getData(id: string): Promise<IPost> {
   const res = await fetch(`https://dummyjson.com/posts/${id}`);
   if (!res.ok) {

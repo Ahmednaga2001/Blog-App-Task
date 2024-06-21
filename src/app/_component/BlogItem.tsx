@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IPost } from "../types";
+import { IPost } from "../_types";
 const BlogItem = ({ post }: { post: IPost }) => {
   return (
     <>

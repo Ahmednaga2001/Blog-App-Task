@@ -1,6 +1,6 @@
 
 import Blogs from "./_component/Blogs"
-import {IPostData} from "./types/index"
+import {IPostData} from "./_types/index"
 async function getData():Promise<IPostData>{
   const res = await fetch('https://dummyjson.com/posts')
   if (!res.ok) {
